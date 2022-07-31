@@ -1,0 +1,13 @@
+{% extends 'default_frame.twig' %}
+
+{% block main %}
+
+        {{ form_start(form, {'method' : 'post', 'action': url('sample')}) }}
+      
+            {{ form_widget(form.title) }}
+            {{ form_errors(form.title) }}
+
+        {{ form_end(form) }}
+        <p>{{ Status }}</p>
+        
+{% endblock %}
