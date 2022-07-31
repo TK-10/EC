@@ -1,0 +1,19 @@
+{% extends 'default_frame.twig' %}
+
+{% extends 'default_frame.twig' %}
+
+{% block main %}
+{% set Gag = find_all() %}
+{% if Gag is defined and Gag%}
+	<ul>
+	{% for key, val in Gag %}
+		<li>{{ key }}:{{ val }}</li>
+	{% endfor %}
+	<ul>
+{% endif%}
+<h3>SamplePage!!</h3>
+{{ Gag }}
+{{ Product.getName() }}
+{{ test(100, 2) }}
+
+{% endblock %}
